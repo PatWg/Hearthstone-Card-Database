@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/filter_class"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/hunter_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:text="@string/hunter"
+        app:layout_constraintStart_toEndOf="@+id/druid_checkbox"
+        app:layout_constraintTop_toTopOf="@+id/textView3" />
+
+    <CheckBox
+        android:id="@+id/druid_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/druid"
+        app:layout_constraintBaseline_toBaselineOf="@+id/hunter_checkbox"
+        app:layout_constraintStart_toStartOf="@+id/guideline2" />
+
+    <CheckBox
+        android:id="@+id/mage_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="67dp"
+        android:text="@string/mage"
+        app:layout_constraintBaseline_toBaselineOf="@+id/hunter_checkbox"
+        app:layout_constraintStart_toStartOf="@+id/shaman_checkbox" />
+
+    <CheckBox
+        android:id="@+id/paladin_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:text="@string/paladin"
+        app:layout_constraintBaseline_toBaselineOf="@+id/priest_checkbox"
+        app:layout_constraintStart_toEndOf="@+id/mage_checkbox" />
+
+    <CheckBox
+        android:id="@+id/priest_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/priest"
+        app:layout_constraintBottom_toTopOf="@+id/warrior_checkbox"
+        app:layout_constraintEnd_toEndOf="@+id/warrior_checkbox"
+        app:layout_constraintStart_toEndOf="@+id/warrior_checkbox" />
+
+    <CheckBox
+        android:id="@+id/rogue_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/rogue"
+        app:layout_constraintBaseline_toBaselineOf="@+id/shaman_checkbox"
+        app:layout_constraintStart_toStartOf="@+id/guideline2" />
+
+    <CheckBox
+        android:id="@+id/shaman_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/shaman"
+        app:layout_constraintStart_toEndOf="@+id/rogue_checkbox"
+        app:layout_constraintTop_toBottomOf="@+id/hunter_checkbox" />
+
+    <CheckBox
+        android:id="@+id/warlock_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/warlock"
+        app:layout_constraintBaseline_toBaselineOf="@+id/shaman_checkbox"
+        app:layout_constraintStart_toStartOf="@+id/mage_checkbox" />
+
+    <CheckBox
+        android:id="@+id/warrior_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/warrior"
+        app:layout_constraintBaseline_toBaselineOf="@+id/warlock_checkbox"
+        app:layout_constraintStart_toEndOf="@+id/warlock_checkbox" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/filter_cost"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/rogue_checkbox" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4">
+
+        <RadioButton
+            android:id="@+id/all_radioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="true"
+            android:text="@string/cost_all" />
+
+        <RadioButton
+            android:id="@+id/zero_radioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/cost_0" />
+
+        <RadioButton
+            android:id="@+id/one_radioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/cost_1" />
+
+        <RadioButton
+            android:id="@+id/two_radioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/cost_2" />
+
+        <RadioButton
+            android:id="@+id/three_radioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/cost_3" />
+
+        <RadioButton
+            android:id="@+id/four_radioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/cost_4" />
+
+        <RadioButton
+            android:id="@+id/five_radioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/cost_5" />
+
+        <RadioButton
+            android:id="@+id/six_radioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/cost_6" />
+
+        <RadioButton
+            android:id="@+id/seven_radioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/cost_7" />
+    </RadioGroup>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="2dp"
+        android:layout_marginEnd="9dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="17dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/search_button" />
+
+    <EditText
+        android:id="@+id/search_editText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:ems="10"
+        android:hint="@string/placeholder"
+        android:inputType="textPersonName"
+        app:layout_constraintBaseline_toBaselineOf="@+id/search_button"
+        app:layout_constraintEnd_toStartOf="@+id/search_button"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/search_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="23dp"
+        android:onClick="searchDatabase"
+        android:text="@string/search"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="8dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

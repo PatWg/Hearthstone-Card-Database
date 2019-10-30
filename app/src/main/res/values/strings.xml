@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Hearthstone Card Database</string>
+
+    <string name="filter_class">Filter by class:</string>
+    <string name="druid">Druid</string>
+    <string name="hunter">Hunter</string>
+    <string name="mage">Mage</string>
+    <string name="paladin">Paladin</string>
+    <string name="priest">Priest</string>
+    <string name="rogue">Rogue</string>
+    <string name="shaman">Shaman</string>
+    <string name="warlock">Warlock</string>
+    <string name="warrior">Warrior</string>
+
+    <string name="filter_cost">Filter by cost:</string>
+    <string name="cost_all">All</string>
+    <string name="cost_0">0</string>
+    <string name="cost_1">1</string>
+    <string name="cost_2">2</string>
+    <string name="cost_3">3</string>
+    <string name="cost_4">4</string>
+    <string name="cost_5">5</string>
+    <string name="cost_6">6</string>
+    <string name="cost_7">7+</string>
+
+    <string name="search">Search</string>
+    <string name="placeholder">Search a card</string>
+
+    <string name="gold">Golden version:</string>
+
+</resources>
