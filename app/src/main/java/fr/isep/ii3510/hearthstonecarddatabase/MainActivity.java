@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
@@ -68,10 +69,42 @@ public class MainActivity extends AppCompatActivity {
     public void searchDatabase(View view) {
         // TODO: Implement this to query the API
         // TODO: 1. Create the Retrofit object with new Retrofit.Builder().baseUrl().addConverterFactory().build()
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl(HearthstoneService.URL)
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
         // TODO: 2. Create the service with retrofit.create(class)
+        HearthstoneService service = retrofit.create(HearthstoneService.class);
         // TODO: 3. Set-up the query parameters
+        setPlayerClassParams();
+        setSearchParam();
         // TODO: 4. Call the service and enqueue it
-        // TODO: 5. Display the results in the RecyclerView
+        Call<QueryResponse> call = service.getCards(param);
+        call.enqueue(new Callback<QueryResponse>() {
+            @Override
+            public void onResponse(Call<QueryResponse> call, Response<QueryResponse> response) {
+                cards = response.body().getResults();
+
+                // TODO: 5. Display the results in the RecyclerView
+                CustomAdapter adapter = new CustomAdapter(
+                        cards.toArray(new Card[0]),
+                        new CustomListener() {
+                            @Override
+                            public void onClick(View v, int position) {
+                                showDetails(position);
+                            }
+                        }
+                );
+                recyclerView.setLayoutManager(new LinearLayoutManager(getApplication()));
+                recyclerView.setAdapter(adapter);
+            }
+
+            @Override
+            public void onFailure(Call<QueryResponse> call, Throwable t) {
+                Log.d("Query failure", t.getMessage());
+            }
+        });
+
     }
 
 
