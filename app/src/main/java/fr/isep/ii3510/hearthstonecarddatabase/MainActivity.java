@@ -67,6 +67,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void searchDatabase(View view) {
         // TODO: Implement this to query the API
+        // TODO: 1. Create the Retrofit object with new Retrofit.Builder().baseUrl().addConverterFactory().build()
+        // TODO: 2. Create the service with retrofit.create(class)
+        // TODO: 3. Set-up the query parameters
+        // TODO: 4. Call the service and enqueue it
+        // TODO: 5. Display the results in the RecyclerView
     }
 
 
