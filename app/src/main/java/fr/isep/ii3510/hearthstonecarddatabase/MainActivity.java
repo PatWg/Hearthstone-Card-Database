@@ -116,6 +116,7 @@ public class MainActivity extends AppCompatActivity {
             }
         }
         if (!playerClasses.isEmpty()) param.setPlayerClass(playerClasses.toArray(new String[0]));
+        else param.setPlayerClass(null);
     }
 
     private void setSearchParam() {
