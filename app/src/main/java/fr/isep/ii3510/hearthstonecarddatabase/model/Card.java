@@ -4,24 +4,24 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 public class Card implements Parcelable {
-    private String cardId, dbfId, name, cardSet, type, rarity, health, playerClass, cost, description, attack, race, img, imgGold;
+    private String cardid, dbfid, name, cardset, type, rarity, health, playerClass, cost, description, attack, race, img, imggold;
 
     public Card() {}
 
-    public String getCardId() {
-        return cardId;
+    public String getCardid() {
+        return cardid;
     }
 
-    public void setCardId(String cardId) {
-        this.cardId = cardId;
+    public void setCardid(String cardid) {
+        this.cardid = cardid;
     }
 
-    public String getDbfId() {
-        return dbfId;
+    public String getDbfid() {
+        return dbfid;
     }
 
-    public void setDbfId(String dbfId) {
-        this.dbfId = dbfId;
+    public void setDbfid(String dbfid) {
+        this.dbfid = dbfid;
     }
 
     public String getName() {
@@ -32,12 +32,12 @@ public class Card implements Parcelable {
         this.name = name;
     }
 
-    public String getCardSet() {
-        return cardSet;
+    public String getCardset() {
+        return cardset;
     }
 
-    public void setCardSet(String cardSet) {
-        this.cardSet = cardSet;
+    public void setCardset(String cardset) {
+        this.cardset = cardset;
     }
 
     public String getType() {
@@ -112,12 +112,12 @@ public class Card implements Parcelable {
         this.img = img;
     }
 
-    public String getImgGold() {
-        return imgGold;
+    public String getImggold() {
+        return imggold;
     }
 
-    public void setImgGold(String imgGold) {
-        this.imgGold = imgGold;
+    public void setImggold(String imggold) {
+        this.imggold = imggold;
     }
 
     @Override
@@ -127,10 +127,10 @@ public class Card implements Parcelable {
 
     @Override
     public void writeToParcel(Parcel parcel, int i) {
-        parcel.writeString(cardId);
-        parcel.writeString(dbfId);
+        parcel.writeString(cardid);
+        parcel.writeString(dbfid);
         parcel.writeString(name);
-        parcel.writeString(cardSet);
+        parcel.writeString(cardset);
         parcel.writeString(type);
         parcel.writeString(rarity);
         parcel.writeString(health);
@@ -140,17 +140,17 @@ public class Card implements Parcelable {
         parcel.writeString(attack);
         parcel.writeString(race);
         parcel.writeString(img);
-        parcel.writeString(imgGold);
+        parcel.writeString(imggold);
     }
 
     public static final Parcelable.Creator CREATOR = new Parcelable.Creator() {
         @Override
         public Card createFromParcel(Parcel source) {
             Card card = new Card();
-            card.cardId = source.readString();
-            card.dbfId = source.readString();
+            card.cardid = source.readString();
+            card.dbfid = source.readString();
             card.name = source.readString();
-            card.cardSet = source.readString();
+            card.cardset = source.readString();
             card.type = source.readString();
             card.rarity = source.readString();
             card.health = source.readString();
@@ -160,7 +160,7 @@ public class Card implements Parcelable {
             card.attack = source.readString();
             card.race = source.readString();
             card.img = source.readString();
-            card.imgGold = source.readString();
+            card.imggold = source.readString();
             return card;
         }
 

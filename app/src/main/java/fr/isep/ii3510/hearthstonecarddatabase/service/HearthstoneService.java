@@ -11,7 +11,7 @@ import retrofit2.http.Headers;
 import retrofit2.http.POST;
 
 public interface HearthstoneService {
-    String URL = "http://10.0.2.2:3000";
+    String URL = "https://boiling-shelf-89461.herokuapp.com/";
 
 
     @GET("cards/")

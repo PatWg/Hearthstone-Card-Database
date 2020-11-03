@@ -53,7 +53,7 @@ public class DetailActivity extends AppCompatActivity {
         if (isChecked) {
             Glide.with(this)
                     .asGif()
-                    .load(card.getImgGold())
+                    .load(card.getImggold())
                     .into(cardImageView);
         } else {
             Glide.with(this)
